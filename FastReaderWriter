@@ -1,0 +1,147 @@
+import java.util.*;
+import java.io.*;
+public class Main {
+    static void showArray(int[] A) {
+        for(int i=0;i<A.length;i++) {
+            System.out.print(A[i]+" ");
+        }
+        System.out.println();
+    }
+    static void showArray(String[] A) {
+        for(int i=0;i<A.length;i++) {
+            System.out.print(A[i]+" ");
+        }
+        System.out.println();
+    }
+    static void showArray(char[] A) {
+        for(int i=0;i<A.length;i++) {
+            System.out.print(A[i]+" ");
+        }
+        System.out.println();
+    }
+    static class FastReader {
+        BufferedReader br;
+        StringTokenizer st;
+
+        public FastReader()
+        {
+            br = new BufferedReader(
+                    new InputStreamReader(System.in));
+        }
+
+        String next()
+        {
+            while (st == null || !st.hasMoreElements()) {
+                try {
+                    st = new StringTokenizer(br.readLine());
+                }
+                catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+            return st.nextToken();
+        }
+
+        int nextInt() { return Integer.parseInt(next()); }
+
+        long nextLong() { return Long.parseLong(next()); }
+
+        double nextDouble()
+        {
+            return Double.parseDouble(next());
+        }
+        char nextChar() {
+            String s=next();
+            return s.charAt(0);
+        }
+        String nextLine()
+        {
+            String str = "";
+            try {
+                str = br.readLine();
+            }
+            catch (IOException e) {
+                e.printStackTrace();
+            }
+            return str;
+        }
+
+        int[] nextArray(int size)
+        {
+            int[] A=new int[size];
+            for(int i=0;i<size;i++)
+                A[i]=nextInt();
+            return A;
+        }
+    }
+    static class FastWriter {
+        BufferedWriter output;
+        FastWriter() {
+            output=new BufferedWriter(new OutputStreamWriter(System.out));
+        }
+        void printInt(int x) throws IOException {
+            String s=Integer.toString(x);
+            output.write(s);
+            output.write('\n');
+            output.flush();
+        }
+        void printLong(long x) throws IOException{
+            String s=Long.toString(x);
+            output.write(s);
+            output.write('\n');
+            output.flush();
+        }
+        void printDouble(double x) throws IOException {
+            String s=Double.toString(x);
+            output.write(s);
+            output.write('\n');
+            output.flush();
+        }
+        void printLine(String s) throws IOException {
+            output.write(s);
+            output.write('\n');
+            output.flush();
+        }
+        void printChar(char c) throws IOException {
+            output.write(c);
+            output.write('\n');
+            output.flush();
+        }
+        void printArray(int[] A) throws IOException {
+            for(int i:A) {
+                output.write(Integer.toString(i)+" ");
+            }
+            output.write('\n');
+            output.flush();
+        }
+        void printList(List<Integer> A) throws IOException {
+            for(int i=0;i<A.size();i++) {
+                output.write(Integer.toString(A.get(i))+" ");
+            }
+            output.write('\n');
+            output.flush();
+        }
+    }
+    static class Pair {
+        int first;
+        int second;
+        Pair(int x,int y) {
+            this.first=x;
+            this.second=y;
+        }
+        boolean equals(Pair t) {
+            if(this.first==t.first && this.second==t.second)
+                return true;
+            return false;
+        }
+
+    }
+
+   
+    public static void main(String[] args) throws IOException {
+
+        FastReader fr = new FastReader();
+        FastWriter fw = new FastWriter();
+        
+    }
+}
